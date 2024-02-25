@@ -28,6 +28,7 @@ RUN pip3 install --upgrade pip setuptools wheel yarl multidict
 # Copy the requirements file and install Python dependencies
 COPY requirements.txt /app/
 RUN pip3 install -r /app/requirements.txt
+RUN pip3 install --upgrade pyrogram
 
 # Copy the bot.py file into the /app directory
 COPY bot.py /app/
